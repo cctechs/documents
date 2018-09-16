@@ -1,0 +1,9 @@
+
+//编译文件, 生成可执行的gdbfile
+go build -gcflags "-N -l" gdbfile.go
+
+//启动调试
+gdb gdbfile
+
+//运行
+
