@@ -1,0 +1,118 @@
+以太坊私有链
+
+geth go-ethereum
+通过geth, 可实现以下功能  开启挖矿  ether币的转移 智能合约的部署和执行
+
+安装geth
+brew tap ethereum/ethereum
+brew install ethereum
+geth —help
+
+搭建私有链
+以太坊支持自定义创世区块
+
+{
+  "config": {
+        "chainId": 10, 
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
+    },
+  "alloc"      : {},
+  "coinbase"   : "0x0000000000000000000000000000000000000000",
+  "difficulty" : "0x20000",
+  "extraData"  : "",
+  "gasLimit"   : "0x2fefd8",
+  "nonce"      : "0x0000000000000042",
+  "mixhash"    : "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "parentHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "timestamp"  : "0x00"
+}
+
+cd privatechain
+geth --datadir data0 init genesis.json
+主体  geth init
+
+其中 geth /chaindata 存放的是区块数据   keystore中存放是账户数据
+
+启动私有链节点
+geth —datadir data0 —networkid 1108 console
+主体 geth console 表示启动节点后进入交互式平台 1108：表示这个私有链的网络ID为1108 
+
+启动后，进入js console
+查看账户 eth.accounts
+创建账户 personal.newAccount
+查看账户余额 eth.getBalance(eth.accounts[0])
+启动& 停止挖矿  miner.start(10)  参数10代表挖矿使用的线程数 第一次启动挖矿会生成挖矿所需的DAG文件，等进度达到100%后，就会开始挖矿
+挖矿的奖励进矿工的账户，账户叫coinbase
+eth.coinbase
+miner.setEtherbase(eth.accounts[1])
+
+web3.fromWei(eth.getBalance(eth.accounts[0]),'ether')
+
+交易
+查看余额
+eth.getBalance(eth.accounts[1])
+从账户0转移10个以太币到账户1 
+
+// 发送交易前，先解锁账户
+personal.unlockAccount(eth.accounts[0])
+
+amount = web3.toWei(10,’ether’)
+eth.sendTransaction({from:eth.accounts[0],to:eth.accounts[1],value:amount})
+
+查看账户余额
+eth.getBalance(eth.accounts[1])
+此时交易提交到区块链，还没有被处理
+txpool.status 查看状态   要使交易被处理，必须要挖矿  miner.start(1);admin.sleepBlocks(1);miner.stop();
+重新查看余额，交易完成
+
+
+
+////////////////////////////
+// 查看交易和区块
+eth.blockNumber
+
+// 通过区块号查看区块
+eth.getBlock(199)
+
+// 通过交易hash查看
+eth.getTransaction(“0x961bab5a1a0b7a956d73a1832bac9caba0b372c120fd43ab758b79809850415b”）
+
+
+
+////////////////////////////
+// 多节点
+net.peerCount  查看节点数量
+admin.peers 查看节点信息
+// 在本地网络中运行多个以太坊节点的实例，必须确保以下条件
+1，每个实例都有独立的数据目录 —datadir
+2，每个实例运行都有独立的端口 eth rpc 两者都是
+3，在集群的情况下，实例之间必须要知道彼此
+4，唯一的ipc通信端点，或者禁用ipc第一个节点
+
+// 启动第一个节点
+geth --datadir ./data/00 --networkid 1108 --ipcdisable --port 61910 --rpcport 8200 console
+
+// 查看enode 
+admin.nodeInfo.enode
+"enode://a4f41507bbda0d205302f48f0ccbfa6f5975fc52630ee628fc6a84a34ddf8f8034e6fb550f6dfc8fb9cb21072e51ad330d01de0c288b1089ae4c8319e2dc7ad7@192.168.74.2:61910"
+
+// 启动第二个节点
+geth --datadir ./data1 init ./genesis.json
+geth --datadir ./data1 --networkid 1108 --ipcdisable --port 61911 --rpcport 8101 --bootnodes "enode://a4f41507bbda0d205302f48f0ccbfa6f5975fc52630ee628fc6a84a34ddf8f8034e6fb550f6dfc8fb9cb21072e51ad330d01de0c288b1089ae4c8319e2dc7ad7@192.168.74.2:61910" console
+
+—bootnodes 设置当前节点启动后，通过node值来链接第一个节点
+
+
+geth --datadir ./data2 init ./genesis.json
+geth --datadir ./data2 --networkid 1108 --ipcdisable --port 61912 --rpcport 8122 --bootnodes “enode://a4f41507bbda0d205302f48f0ccbfa6f5975fc52630ee628fc6a84a34ddf8f8034e6fb550f6dfc8fb9cb21072e51ad330d01de0c288b1089ae4c8319e2dc7ad7@192.168.74.2:61910" console
+
+////////////////////////////
+// 智能合约
+https://ethereum.github.io/browser-solidity/
+	
+	
+	
+	
+
