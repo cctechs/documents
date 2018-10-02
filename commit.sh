@@ -1,4 +1,5 @@
 git status
 git add .
-git commit -a -m "update"
+read comment
+git commit -a -m $comment
 git push
