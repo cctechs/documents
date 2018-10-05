@@ -1,0 +1,2 @@
+     9	read -p "passwd:" -n 6 -t 10 -s password
+    10	echo -e "pwd is $password"
