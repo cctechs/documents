@@ -13,4 +13,7 @@ docker 包括三个基本概念
 docker pull 
 
 运行
-docker run
+docker run 
+
+docker image ls 列出已经下载的镜像
+docker image rm <镜像1>（id 名称等）
