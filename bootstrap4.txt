@@ -1,0 +1,163 @@
+https://www.w3schools.com/bootstrap/bootstrap_typography.asp
+
+//felx 
+-- .d_flex         // create a flexbox container and to director children into flex items
+-- .d_inline_flex  // create inline flexbox container
+// responsive
+-- .d_sm_flex
+-- .d_sm_inline_flex
+-- .d_md_flex
+-- .d_md_inline_flex
+-- .d_lg_flex
+-- .d_lg_inline_flex
+-- .d_xl_flex
+-- .d_xl_inline_flex
+-- .flex_row
+-- .flex_column
+
+//div
+-- .container        // provide a responsive fixed width container
+-- .container-fluid  // provide a full width container, spanning the entire width of th viewport
+
+// gird
+-- <div class="row">
+-- <div class="col-md-(1-12)"
+-- xs  < 768px
+-- sm  >= 768px
+-- md  >= 992px
+-- lg  >= 1200px
+
+// Text/Typegraphy
+-- <bod>  <p>  <h1>-<h6>
+-- <small>
+-- <mark>  <abbr> <blockquote>  <code>  <kbd>
+
+// the classes for text colors are:
+-- .text-muted text-primary text-success text-info text-warning text-danger
+
+// the classes for background colors are:
+-- .bg_primary bg_success bg_info bg_warning bg_danger
+
+// table
+-- .table                 // adds basic styleing to a table
+-- .table-striped(条纹)    // adds zebra-strips to a table
+-- .table-bordered         // ands border on all sides of the table and cells
+-- .table-hover            // adds a hover effect on table rows
+-- .table-condensed(紧凑)  // m akes a table more compact by cutting cell padding in half
+-- .table-responsive // the table will then scroll horizontally on small devices no difference
+
+// Images
+-- .img-rounded          // adds rounded corners to an img
+-- .img_circle           // shapes the image to a circle
+-- .img-thumbnail(缩略图) // shapes the image to a thumbnail 
+-- .img-responsive       // image come in all sizes, so do screens responsive Images automatically adjust to fit the size of the screens
+
+// jumbotron <div class="jumbotron page-header">
+-- .jumbotron  // a jumbotron indicates a big box for calling extra attention to some special content or information
+-- .page-header // use a <div class="page-header"> to create a page header
+
+// wells
+-- .well // <div class="well"> adds a rounded border around an element with a gray color and some padding
+-- .well-sm // small wells
+-- .well-lg // large wells
+
+// alert
+-- .alert   //
+-- .alert-success
+-- .alert-info
+-- .alert-warning
+-- .alert-danger
+-- .alert-link  // <a href="#" class="alert-link">
+// to close the alert message , add .alert-dismissible(可取消) class to the alert container, then add class="close" and data-dismiss="alert" to a link or a button element
+-- .alert-dismissible
+
+// Button
+// the button classes can be used on an <a> <button> <input> 
+-- .btn 
+-- .btn-default
+-- .btn-primary
+-- .btn-success
+-- .btn-info
+-- .btn-warning
+-- .btn-danger
+-- .btn-link
+// button sizes
+-- .btn-lg 
+-- .btn-md
+-- .btn-sm
+-- .btn-xs
+// block level button 
+-- .btn-block
+// active/disable buttons
+-- .active 
+-- .disabled
+
+// dropdown 
+// a dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list
+-- .dropdown // indicates a dropdown menu, to open the dropdown menu, user .dropdown-toggle and data-toggle="dropdown"
+-- .caret // create a caret arrow icon 
+-- .dropdown-menu  // add to the <ul> to build the menu  <ul class="dropdown-menu">
+-- .divider        // <li class="divider">
+
+// Button groups <div class="btn-group">
+-- .btn-group  
+-- .btn-group-ls|sm|xs
+-- .btn-group-vertical  // create a vertical button groups, default horizontally
+-- .btn-group-justified // to span the entire width of the screen 
+
+// glyphicon
+-- <span class="glyphicon glyphicon-name"></span>
+-- https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp
+
+// Badges
+-- .badge // <span class="badge">  create  badges
+
+// ProgressBar
+-- .progress  // to create a default progress bar, add .progress to <div>
+-- .progress-bar-success
+-- .progress-bar-info
+-- .progress-bar-warning
+-- .progress-bar-danger
+-- .progress-bar-striped // add striped to the progress bar
+-- .active   // to animate the progress bar
+
+// Pagination
+-- .pagination  // add to <ul> element
+-- .active     // <li class="active"><a href="#">2</a></li>
+-- .disabled
+-- .pagination-lg 
+-- .pagination-sm
+-- .breadcrumb  
+
+// Pager
+-- .pager   // add the .pager to <ul>
+-- .previous 
+-- .next
+
+// List groups
+-- .list-group       // <ul class="list-group">
+-- .list-group-item  // <li class="list-group-item">
+-- .active
+-- .disable
+-- .list-group-item-success
+-- .list-group-item-info
+-- .list-group-item-warning
+-- .list-group-item-danger
+// Custom content
+-- .list-group-item-heading
+-- .list-group-item-text
+
+// Panle
+-- .panel 
+-- .panel-body
+-- .panel-heading
+-- .panel-footer
+-- .panel-group
+-- .panel-default
+-- .panel-primary
+-- .panel-success
+-- .panel-info
+-- .panel-warning
+-- .panel-danger
+
+// Collapsible hide or show large amount of content

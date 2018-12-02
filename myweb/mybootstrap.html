@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>mybootstrap</title>
+    <!---
+    <link href="./bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./static/js/jquery-3.3.1.min.js"></script>
+    <script src="./bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./static/js/myui.js"></script>
+    <link rel="stylesheet" href="./priceing.css">
+</head>
+
+<body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#">Features</a>
+            <a class="p-2 text-dark" href="#">Enterprise</a>
+            <a class="p-2 text-dark" href="#">Support</a>
+            <a class="p-2 text-dark" href="#">Pricing</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div>
+
+    <h1>hello world</h1>
+
+    <h1>test001<small>001qwe</small></h1>
+
+    <p>标签式的导航菜单</p>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">001</a></li>
+        <li><a href="#">002</a></li>
+        <li><a href="#">003</a></li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Java<span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a href="#">test001</a></li>
+                <li><a href="#">test002</a></li>
+                <li><a href="#">test003</a></li>
+                <li><a href="#">test004</a></li>
+                <li class="divider"></li>
+                <li><a href="#">test001</a></li>
+            </ul>
+
+        </li>
+
+        <li><a href="#">004</a></li>
+    </ul>
+    <p>胶囊式的导航菜单</p>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">001</a></li>
+        <li><a href="#">002</a></li>
+        <li><a href="#">003</a></li>
+        <li><a href="#">004</a></li>
+    </ul>
+
+    <h2>引导主体副本</h2>
+    <p class="lead">asdasdasdad</p>
+    <input type="button" onclick="AddTableRow()" value="表格测试" width="200%">
+    <table class="table" id="table001">
+        <caption>上下文表格布局</caption>
+        <thead>
+            <tr>
+                <th>产品</th>
+                <th>付款日期</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody id="table001body">
+        </tbody>
+    </table>
+
+    <form role="form" class="form-inline">
+        <div class="form-group">
+            <label for="name">名称</label>
+            <input type="text" class="form-control" id="name" placeholder="input name">
+        </div>
+        <div class="form-group">
+            <label for="inputfile">文件输入</label>
+            <input type="file" id="inputfile">
+            <p class="help-block">块级帮助文本的实例</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox">请打钩
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">提交</button>
+    </form>
+
+    <button type="button" class="btn btn-default btn-lg active">button001</button>
+    <button type="button" class="btn btn-primary">button002</button>
+    <button type="button" class="btn btn-success">button003</button>
+    <button type="button" class="btn btn-info">button004</button>
+    <button type="button" class="btn btn-warning">button005</button>
+    <button type="button" class="btn btn-danger">button006</button>
+    <button type="button" class="btn btn-link">button007</button>
+
+    <div class="container">
+        <h2>按钮组</h2>
+        <span>btn-group</span>
+        <div>
+            <button type="button" class="btn btn-success">Apple</button>
+            <button type="button" class="btn btn-success">Test</button>
+            <button type="button" class="btn btn-success">Sony</button>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg" style="color:rgb(212, 106, 64);">
+        <span class="glyphicon glyphicon-user">User</span>
+    </button>
+
+    <button type="button" class="btn btn-success btn-lg" style="color:rgb(212, 106, 64);">
+        <span class="glyphicon glyphicon-film">Film</span>
+    </button>
+
+    <div class="container">
+        <div style="padding:100px 100px 10px;">
+            <form class="bs-example ba-example-form" role="form">
+                <div class="input-group input-group-lg">
+                    <span class="inout-group-addon">@</span>
+                    <input type="text" class="form-control" placeholder="ert">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <ul class="pagination pagination-lg">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+
+</body>
+
+</html>

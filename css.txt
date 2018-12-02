@@ -1,0 +1,79 @@
+//CSS盒子模型
+所有html元素都可以看做盒子，包括边距 边框 填充 实际内容
+由外到内依次为：
+--margin:外边距，清除边框外的区域，外边距是透明的；
+--outline:轮廓
+--border:边框，围绕在内边距和内容外的边框；
+--padding:内边距，清除内容周围的区域，内边距是透明的；
+--content:盒子内容，显示文本和图像；
+
+//分组和嵌套
+h1,h2,p{}
+
+p{} 为所有p元素指定一个样式；
+.marked{} 为所有class="marked"的元素指定一个样式；
+.marked p{} 为所有class="marked"元素内的p元素指定一个样式;
+p.marked{} 所有class="marked"的p元素指定一个样式；
+
+// 尺寸属性
+height:设置元素的高度
+line-height:设置行高
+max-height:设置元素的最大高度
+min-height:设置元素的
+min-width:设置元素的最小宽度
+width:设置元素的宽度
+
+// 块 & 内联元素
+-- 块元素是一个元素，占用了全部宽度，前后都是换行符，比如<h1> <p> <div> <li>
+-- 内联元素只需要必要的宽度，不强制换行，比如 <span> <a>
+-- 更改内联元素和块元素 li{display:inline} span{display:block}
+
+// Position(定位)
+-- position 属性指定了元素的定位类型
+   - static   静态定位的元素不会受到top, bottom, left, right影响  
+   - relative 相对定位是相对其正常位置
+   - fixed    元素的位置相对于浏览器窗口是固定位置，即使窗口滚动也不会移动
+   - absolute 相对于最近的已定位父元素，如果没有已定位的父元素，那么其位置是相对于<html>
+   - sticky   基于用户的滚动位置来定位
+   - z-index  重叠元素（指定哪个元素在前面，哪个在后面）
+
+// Overflow
+-- overflow 可以控制内容溢出元素框时在对应的元素区间内添加滚动条
+   - visible 默认值，内容不会被修剪，会呈现在元素框之外
+   - hiddle  内容会被裁剪， 并且其余内容是不可见的
+   - scroll  内容会被裁剪，但是浏览器会显示滚动条以便查看内容
+   - auto    如果内容被裁剪，浏览器会显示滚动条查看内容   
+   - inherit 规定应该从父元素继承overflow属性的值
+   
+// Float(浮动)
+-- float 使元素向左会向右浮动，其周围的元素也会重新排列
+
+// 布局 水平&垂直对齐
+-- 文本居中对齐 text-align:center
+-- 图片居中对齐 margin:auto
+-- 左右对齐 使用定位方式 position:absolute
+
+// 组合选择符
+-- 后代选择器，用于选择某元素的后代元素 div p {}
+-- 子元素选择器， 用于选择作为某元素子元素的元素 div > p{}
+-- 相邻兄弟选择器  div+p{}
+-- 后续兄弟选择器  div~p{}
+
+// CSS伪类
+-- 用来添加一些选择器的特殊效果
+-- 匹配第一个元素  p:first-child{}
+-- 匹配所有p元素中的第一个i元素 p>i: first-child
+
+// CSS伪元素
+-- :first-line 用于向文本的首行设置特殊样式, 只能用于块级元素
+-- :first-letter 用于向文本的首字母设置特殊的样式
+-- :before 可以在元素的内容前面插入新内容
+-- :after  可以在元素的后面插入新内容
+
+// 属性选择器
+-- 比如：[title]{} 把包含标题的所有元素变为蓝色
+--      [title=runoob] 属性和值选择器
+
+// CSS3 弹性盒子
+-- 弹性盒子由弹性容器和弹性子元素组成
+-- 弹性容器通过设置display属性的值为flex或inline-flex将其定义为弹性容器

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./static/css/mystyle.css">
+    <title>myweb</title>
+    <script src="./static/js/mywebsocket.js"></script>
+    <script src="./static/js/myui.js"></script>
+    <script src="./static/js/utils.js"></script>
+    <script src="./static/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <video id="myvideo" width="800" , height="600" , controls="controls" loop="loop" autoplay="autoplay">
+        <source src="./video/tellmewhy.mp4" type="video/mp4">
+    </video>
+    <h2 id="pagecount">pagecount</h2>
+
+    <a href="./mybootstrap.html">mybootstrap</a>
+
+    <div title="testbutton">
+        <textarea rows="10" cols="30">
+
+        </textarea>
+        <br>
+
+        <button onclick="ConnServer()">hello</button>
+        <button onclick="SavePageCount()">Save</button>
+    </div>
+
+    <div id="chat">
+        <textarea id="msginfo" rows="10" cols="30" readonly></textarea><br>
+        <input id="chatvalue" type="text" size="25">
+        <input type="button" onclick="SendText()"  value="发送">
+    </div>
+
+
+
+    <div style="text-align:center">this is a test</div>
+    <div id="fotter">www.baidu.com123</div>
+
+    
+
+</body>
+
+
+
+</html>
