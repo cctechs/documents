@@ -21,3 +21,7 @@ ps -ef |grep mysqld
 
 ep: 添加用户名为guest 密码 123qwe 并授权 select insert update
 
+create user 'weber'@'localhost' identified by '123qwe';
+
+
+source *.sql; -- 执行sql
